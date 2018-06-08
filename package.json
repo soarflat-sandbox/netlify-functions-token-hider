@@ -1,0 +1,20 @@
+{
+  "name": "netlify-functions-token-hider",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "npm run site:build && npm run lambda:build",
+    "site:dev": "node server.js",
+    "site:build": "parcel build src/site/index.html --public-url ./",
+    "lambda:dev": "netlify-lambda serve src/lambda",
+    "lambda:build": "netlify-lambda build src/lambda"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "express": "^4.16.3",
+    "http-proxy-middleware": "^0.18.0"
+  },
+  "devDependencies": {
+    "netlify-lambda": "^0.4.0",
+    "parcel-bundler": "^1.7.0"
+  }
+}
